@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Page4">
+    <ContentPage.Resources>
+        <StyleSheet Source="/StyleSheet1.css" />
+    </ContentPage.Resources>
+    <StackLayout StyleId="body123" Margin="60">
+        <Label x:Name="header" StyleId="header" Text="Welcome" />
+        <Entry  x:Name="login" Placeholder ="Username" StyleClass="entries" BackgroundColor="White" />
+        <Entry  x:Name="pas" Placeholder ="Password" StyleClass="entries" BackgroundColor="White" IsPassword="True"/>
+        <Button Text="Sign In" Clicked="OnSignInClicked" StyleClass="button"/>
+
+
+        <Grid ColumnSpacing="0" RowSpacing="0" x:Name="das">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="100" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <StackLayout 
+            Orientation="Horizontal" Grid.Row="0" Grid.Column="0">
+                <CheckBox  StyleClass="checkbox" VerticalOptions="Center" x:Name="prov"/>
+                <Label Text="Remember me" StyleClass="remember" Margin="13"/>
+            </StackLayout>
+            
+            <Label Text="I forgot!" StyleClass="forgot" HorizontalOptions="End" Grid.Row="0" Grid.Column="3" Margin="10"/>
+
+
+        </Grid>
+
+    </StackLayout>
+</ContentPage>

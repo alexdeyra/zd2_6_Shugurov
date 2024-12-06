@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App1"
+             x:Class="App1.Page1">
+    <ContentPage.Resources>
+        <StyleSheet Source="/StyleSheet1.css" />
+    </ContentPage.Resources>
+    <StackLayout Padding="20">
+
+
+
+
+
+        <Label Text="" x:Name="nam" />
+        <Label Text="Сумма кредита:" />
+            <Entry x:Name="LoanAmountEntry" Keyboard="Numeric" Placeholder="Введите сумму" BackgroundColor="White" />
+
+            
+            <Label Text="Срок (месяцев):" />
+            <Entry x:Name="LoanTermEntry" Keyboard="Numeric" Placeholder="Введите срок" BackgroundColor="White"/>
+
+            
+            <Label Text="Вид платежа:" />
+            <Picker x:Name="PaymentTypePicker" BackgroundColor="White" >
+                <Picker.Items>
+                    <x:String>Аннуитетный</x:String>
+                    <x:String>Дифференцированный</x:String>
+                </Picker.Items>
+            </Picker>
+
+            
+            <Label Text="Процентная ставка (%):" />
+        <Slider x:Name="InterestRateSlider" Minimum="0" Maximum="200" Value="5"  ThumbColor="Red"  />
+            <Label Text="{Binding Source={x:Reference InterestRateSlider}, Path=Value, StringFormat='Процентная ставка: {0:F1}%'}" />
+
+            
+            <Button Text="Рассчитать" Clicked="CalculateButton_Clicked" />
+
+            
+            <Label Text="Ежемесячный платеж:" />
+            <Label x:Name="MonthlyPaymentLabel" Text="..." />
+
+            <Label Text="Общая сумма:" />
+            <Label x:Name="TotalAmountLabel" Text="..." />
+
+            <Label Text="Переплата:" />
+            <Label x:Name="OverpaymentLabel" Text="..." />
+
+        </StackLayout>
+
+    
+</ContentPage>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Page2">
+    <ContentPage.Resources>
+        <StyleSheet Source="/StyleSheet1.css" />
+    </ContentPage.Resources>
+
+    
+    <StackLayout Padding="20" Orientation="Horizontal">
+        <StackLayout Margin="30">
+            <Label Text="Центробанк РФ:" FontAttributes="Bold" />
+            <Label Text="USD: 80.000" />
+            <Label Text="EUR: 86.000" />
+        </StackLayout>
+        <StackLayout HorizontalOptions="End" Margin="30">
+            <Label Text="Текущая дата:" FontAttributes="Bold" />
+            <Label x:Name="CurrentDatePicker" Text="{Binding CurrentDate}" />
+        </StackLayout>
+
+            
+            
+
+            
+       
+
+    </StackLayout>
+    
+</ContentPage>
